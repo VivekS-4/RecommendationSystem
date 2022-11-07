@@ -12,7 +12,7 @@ movies_df = pd.read_csv('Resources\\movies.csv', index_col='movie_id')
 ratings_df = pd.pivot_table(df, index='user_id', columns='movie_id', aggfunc=np.max)
 
 # Apply matrix factorization to find the latent features
-U, M = matrix_factorisation_utilities.low_rank_matrix_factorization(ratings_df.values(),
+U, M = matrix_factorisation_utilities.low_rank_matrix_factorization(ratings_df.values,
                                                                     num_features=15,
                                                                     regularization_amount=1.0)
 

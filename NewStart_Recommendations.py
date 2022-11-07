@@ -5,7 +5,7 @@ import pandas as pd
 means = pickle.load(open("means.dat", "rb"))
 
 # Load movie titles
-movies_df = pd.read_csv('movies.csv', index_col='movie_id')
+movies_df = pd.read_csv('Resources\\movies.csv', index_col='movie_id')
 
 # Just use the average movie ratings directly as the user's predicted ratings
 user_ratings = means

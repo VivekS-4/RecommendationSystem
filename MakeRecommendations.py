@@ -14,7 +14,7 @@ ratings_df = pd.pivot_table(raw_dataset_df, index='user_id',
                             aggfunc=np.max)
 
 # Apply matrix factorization to find the latent features
-U, M = matrix_factorisation_utilities.low_rank_matrix_factorization(ratings_df.values(),
+U, M = matrix_factorisation_utilities.low_rank_matrix_factorization(ratings_df.values,
                                                                     num_features=15,
                                                                     regularization_amount=0.1)
 
